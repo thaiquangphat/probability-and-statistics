@@ -1,2 +1,2 @@
-# probability-and-statistics
-All files related to my probability and statistics course at HCMUT
+# Probability & Statistics
+_All files related to my probability and statistics assignment at HCMUT_
