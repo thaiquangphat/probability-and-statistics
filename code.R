@@ -83,6 +83,18 @@ if (file.exists("cpu-clean.csv")) {
 
 export(data, "cpu-clean.csv")
 
+#--------------------------------------------- DESCRIPTIVE STATISTICS ---------------------------------------------
+
+pacman::p_load(
+  rio,
+  ggplot2,
+  zoo,
+  car,
+  FSA
+)
+
+data <- import("cpu-clean.csv") 
+
 #--------------------------------------------- LITHOGRAPHY PLOT ---------------------------------------------
 
 data_filtered <- data[!is.na(data$litho), ]
@@ -381,6 +393,8 @@ corrplot(cor_matrix,
          cl.ratio = 0.2,          
          cl.offset = 1.3,)    
 
+#--------------------------------------------- INFERENTIAL STATISTICS ---------------------------------------------
+
 #-------------------------------------------- LITHOGRAPHY AS CPU ERA --------------------------------------------
 
 data_rw <- import("cpu-clean.csv")
@@ -546,6 +560,8 @@ plot(test_set$tdp, y_pred, xlab = "actual tdp", ylab = "predicted tdp", main = "
 abline(0, 1, col = "red")
 # Add a legend
 legend("topleft", legend = "Perfect Prediction", col = "red", lty = 1)
+
+#--------------------------------------------- EXTENSION ---------------------------------------------
 
 #--------------------------------------------- MULTIVARIATE ADAPTIVE REGRESSION TDP ---------------------------------------------
 library(dplyr)   #data wrangling
