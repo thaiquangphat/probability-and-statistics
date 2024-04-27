@@ -1,4 +1,4 @@
-#--------------------LITHOGRAPHY PLOT------------------------------
+#--------------------------------------------- LITHOGRAPHY PLOT ---------------------------------------------
 
 data_filtered <- data[!is.na(data$litho), ]
 
@@ -20,7 +20,7 @@ ggplot(data_filtered, aes(x = litho)) +
 
 summary(data_filtered$litho)
 
-#--------------------RPRICE PLOT------------------------------
+#--------------------------------------------- RPRICE PLOT ---------------------------------------------
 
 data_filtered <- data[!is.na(data$rprice), ]
 
@@ -40,7 +40,7 @@ ggplot(data_filtered, aes(x = rprice)) +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=0.5)) +
   theme(plot.title = element_text(hjust = 0.5))
 
-#------------------NCORE PLOT-----------------------------------------
+#--------------------------------------------- NCORE PLOT ---------------------------------------------
 
 data_filtered <- data[!is.na(data$ncore), ]
 
@@ -62,7 +62,7 @@ ggplot(data_filtered, aes(x = ncore)) +
 
 summary(data_filtered$ncore)
 
-#------------------BFREQ PLOT-----------------------------------------
+#--------------------------------------------- BFREQ PLOT ---------------------------------------------
 data_filtered <- data[!is.na(data$bfreq), ]
 
 ggplot(data_filtered, aes(x = bfreq)) +
@@ -81,7 +81,7 @@ ggplot(data_filtered, aes(x = bfreq)) +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=0.5)) +
   theme(plot.title = element_text(hjust = 0.5))
 
-#------------------TDP PLOT-----------------------------------------
+#--------------------------------------------- TDP PLOT ---------------------------------------------
 data_filtered <- data[!is.na(data$tdp), ]
 
 ggplot(data_filtered, aes(x = tdp)) +
@@ -100,7 +100,7 @@ ggplot(data_filtered, aes(x = tdp)) +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=0.5)) +
   theme(plot.title = element_text(hjust = 0.5))
 
-#------------------TEMP-----------------------------------------
+#--------------------------------------------- TEMP ---------------------------------------------
 data_filtered <- data[!is.na(data$temp), ]
 
 ggplot(data_filtered, aes(x = temp)) +
